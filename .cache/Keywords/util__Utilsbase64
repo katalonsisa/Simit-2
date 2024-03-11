@@ -1,0 +1,106 @@
+{
+  "keywordFileContentHash": "29FE2A6338C326198086AED8AAA15EFB",
+  "keywordClasses": [
+    {
+      "name": "util.Utilsbase64",
+      "keywordMethods": [
+        {
+          "name": "encodeText",
+          "parameters": [
+            {
+              "name": "texto",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Este metodo Codifica en base 64 un texto\r\n\t * @param texto\r\n\t * @return El texto en base 64\r\n\t * @author kevin.muentes\r\n\t */"
+        },
+        {
+          "name": "encodeTextFile",
+          "parameters": [
+            {
+              "name": "ruta",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Este metodo codifica en base 64 un archivo \r\n\t * @param ruta\r\n\t * @return Retorna el contenido del archivo en base 64 \r\n\t * @author kevin.muentes\r\n\t */"
+        },
+        {
+          "name": "encodeFile",
+          "parameters": [
+            {
+              "name": "path",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * @param path\r\n\t * @return \r\n\t */"
+        },
+        {
+          "name": "decodeText",
+          "parameters": [
+            {
+              "name": "texto",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo para decodificar un texto en base 64\r\n\t * @param texto\r\n\t * @return texto desifrado \r\n\t * @author kevin.muentes\r\n\t */"
+        },
+        {
+          "name": "decodeTextFile",
+          "parameters": [
+            {
+              "name": "ruta",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo para desifrar un archivo en base 64\r\n\t * @param ruta\r\n\t * @return texto del documento desifrado\r\n\t * @author kevin.muentes\r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

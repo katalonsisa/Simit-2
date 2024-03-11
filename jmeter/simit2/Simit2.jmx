@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables de ambiente" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="Host" elementType="Argument">
+            <stringProp name="Argument.name">Host</stringProp>
+            <stringProp name="Argument.value">172.31.3.17</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Host of the Service (test qx backsimit2pru.quipux.com)</stringProp>
+          </elementProp>
+          <elementProp name="user" elementType="Argument">
+            <stringProp name="Argument.name">user</stringProp>
+            <stringProp name="Argument.value">1128478818</stringProp>
+            <stringProp name="Argument.desc">user with conect service </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="password" elementType="Argument">
+            <stringProp name="Argument.name">password</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.desc">password with conect service</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Divipo" elementType="Argument">
+            <stringProp name="Argument.name">Divipo</stringProp>
+            <stringProp name="Argument.value">05360000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">divipo of the secretari</stringProp>
+          </elementProp>
+          <elementProp name="limit_comparendos" elementType="Argument">
+            <stringProp name="Argument.name">limit_comparendos</stringProp>
+            <stringProp name="Argument.value">500</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">max of comparendo generate </stringProp>
+          </elementProp>
+          <elementProp name="path_script" elementType="Argument">
+            <stringProp name="Argument.name">path_script</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir();)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="usuarios" elementType="Argument">
+            <stringProp name="Argument.name">usuarios</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${Host}</stringProp>
+        <stringProp name="HTTPSampler.port">8080</stringProp>
+        <stringProp name="HTTPSampler.protocol">http</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Cargas Transito" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${usuarios}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1375525852000</longProp>
+        <longProp name="ThreadGroup.end_time">1375525852000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="TestPlan.comments">Grupo de pruebas de los componentes de </stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set personas de prueba" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/CargaArchivos/datos-de-prueba_personas.txt</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Nombre,Direcion, Placa</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set Secretaria" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/CargaArchivos/SecretariasCargaComparendo.txt</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Divipo, Secretaria</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set Radicados Consulta" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/CargaArchivos/Consulta_Radicados.txt</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Radicado, DivipoRadicado</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set Liquidacion" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/Liquidacion/Liquidaciones.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">NumeroLiquidacion,ValorLiquidacion</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Carga Archivos " enabled="true">
+          <stringProp name="TestPlan.comments">aqui se encuentra los servicios espuestos por carga archivos </stringProp>
+        </TestFragmentController>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">usuario</stringProp>
+                <stringProp name="Header.value">admin</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">password</stringProp>
+                <stringProp name="Header.value">admin</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CargaArchivo" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename">${path_script}/Include/Scripts/com/co/quipux/simit2/BackOffice/CargaArchivos/CargaArchivos.groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">/* groovylint-disable CompileStatic */
+import org.apache.commons.lang.RandomStringUtils
+import java.security.SecureRandom
+import java.text.SimpleDateFormat
+import java.io.File 
+
+
+String charset = ((&apos;0&apos;..&apos;9&apos;)).join()
+//def tipoDocumento = [0:11, 1:10, 2:10, 3:6, 4:10, 5:11, 6:14, 7:9, 8:11, 9:11]
+
+
+
+SimpleDateFormat Fechaformateador = new SimpleDateFormat(&apos;dd/MM/yyyy&apos;)
+SimpleDateFormat Horaformateador = new SimpleDateFormat(&apos;HHmm&apos;)
+
+
+String fechaComparendo = Fechaformateador.format(new Date())
+String Hora = Horaformateador.format(new Date())
+
+int totalComparendos = (int) (new SecureRandom().nextDouble() * vars.get(&apos;limit_comparendos&apos;).toInteger())
+String diviSecre = vars.get(&apos;Divipo&apos;)
+String secretaria = vars.get(&apos;Secretaria&apos;)
+String archivo = &apos;&apos;
+for (int i = 1; i &lt;= totalComparendos; i++) {
+    def tipoDocumentoSelect =1
+    String cedula = RandomStringUtils.random(11, charset.toCharArray())
+    String randomNumero = RandomStringUtils.random(10, charset.toCharArray())
+    String dire = vars.get(&apos;Direcion&apos;)
+    String placa = vars.get(&apos;Placa&apos;)
+    String nombre = vars.get(&apos;Nombre&apos;)
+
+    archivo += &quot;${i},${diviSecre}00${randomNumero},${fechaComparendo},${Hora},${dire},${diviSecre},${secretaria}&quot; +
+        &quot;,${placa},${diviSecre},5,4,0,,${tipoDocumentoSelect},${cedula},2,Carlos,Zorzano,47,${dire}&quot;+
+        &quot;,,4340181267,${diviSecre},1993233499,1,${diviSecre},09/10/2029,1,0334762271,${diviSecre},1584580241,4,&quot;+
+    &quot;${nombre},,,,999,PRUEBA JMETER,N,N,N,N,,,,,,,,,45120,0,${diviSecre},1,N,C32,45120, \n&quot;
+}
+def valorTotal = 45120 * totalComparendos
+archivo += &quot;${totalComparendos},${valorTotal},4618808826,8297969317&quot;
+def archivoFinal = archivo.toString().bytes.encodeBase64().toString()
+
+log.info(archivofinal)
+
+props.put(&apos;ArchivoCargaArchivo&apos;, archivoFinal)
+
+
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST_CargaArchivo" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+   &quot;codigoEntidad&quot;:&quot;${Divipo}&quot;,&#xd;
+   &quot;tipoMedioCarga&quot;: 1,&#xd;
+   &quot;archivo&quot;:[&#xd;
+      {&#xd;
+         &quot;tipoArchivo&quot;: 1,&#xd;
+         &quot;archivo&quot;: &quot;${ArchivoCargaArchivo}&quot; ,&#xd;
+         &quot;nombreArchivo&quot;: &quot;${Divipo}comp.txt&quot;&#xd;
+      }&#xd;
+   ]&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">simit/microservices/cargas-transito/CargasTransito/cargas/cargarArchivos</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Servicio rest que resive la carga de archivos </stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.mensaje</stringProp>
+              <stringProp name="EXPECTED_VALUE">Se han recibido los archivos correctamente</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST_ConsultarRadicado" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;radicado&quot;: ${Radicado},&#xd;
+  &quot;idSecretaria&quot;: &quot;${DivipoRadicado}&quot;&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">simit/microservices/cargas-transito/CargasTransito/cargas/consultaRadicado</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Servicio Rest que Consulata por Radicado</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST_ConsutlaErrores" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;radicado&quot;: ${Radicado},&#xd;
+  &quot;idSecretaria&quot;: &quot;${DivipoRadicado}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">simit/microservices/cargas-transito/CargasTransito/cargas/reporteErrores</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Servicio rest que permite consular los errores por radicado </stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Integracion Bancos" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${usuarios}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1375525852000</longProp>
+        <longProp name="ThreadGroup.end_time">1375525852000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="TestPlan.comments">Grupo de pruebas de los componentes de </stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set personas de prueba" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/CargaArchivos/datos-de-prueba_personas.txt</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Nombre,Direcion, Placa</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set Secretaria" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/CargaArchivos/SecretariasCargaComparendo.txt</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Divipo, Secretaria</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set Radicados Consulta" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/CargaArchivos/Consulta_Radicados.txt</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Radicado, DivipoRadicado</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Data Set Liquidacion" enabled="true">
+          <stringProp name="filename">${path_script}/Include/assets/Datos de prueba/Liquidacion/Liquidaciones.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">NumeroLiquidacion,ValorLiquidacion</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="WSATH" enabled="true">
+          <stringProp name="TestPlan.comments">Servicios Soap del banco ATH</stringProp>
+        </TestFragmentController>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="PagoLiquidacion" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename">${path_script}/Include/Scripts/com/co/quipux/simit2/BackOffice/WSATH/PagoLiquidacion.groovy</stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def fecha =  new Date().format(&apos;YYYY-MM-dd&apos;)
+
+props.put(&apos;FechaLiquidacion&apos;, fecha)
+</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_GetBill" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:web=&quot;http://webservices.qxmultas.quipux.com.co&quot; xmlns:xsd=&quot;http://onlinebilling.biller.webservices.qxmultas.quipux.com.co/xsd&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;web:getBill&gt;&#xd;
+         &lt;!--Optional:--&gt;&#xd;
+         &lt;web:billRequest&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;xsd:agreementId&gt;100&lt;/xsd:agreementId&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;xsd:currentDatetime&gt;${FechaLiquidacion}T00:00:00.445Z&lt;/xsd:currentDatetime&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;xsd:inqDate&gt;${FechaLiquidacion}T00:00:00.445Z&lt;/xsd:inqDate&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;xsd:invoiceId&gt;${NumeroLiquidacion}&lt;/xsd:invoiceId&gt;&#xd;
+            &lt;!--Zero or more repetitions:--&gt;&#xd;
+            &lt;xsd:reference&gt;&#xd;
+               &lt;!--Optional:--&gt;&#xd;
+               &lt;xsd:message&gt;1&lt;/xsd:message&gt;&#xd;
+               &lt;!--Optional:--&gt;&#xd;
+               &lt;xsd:name&gt;1&lt;/xsd:name&gt;&#xd;
+            &lt;/xsd:reference&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;xsd:requestId&gt;1&lt;/xsd:requestId&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;xsd:searchType&gt;1&lt;/xsd:searchType&gt;&#xd;
+         &lt;/web:billRequest&gt;&#xd;
+      &lt;/web:getBill&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/WsATH?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">urn:getBill</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <HTMLAssertion guiclass="HTMLAssertionGui" testclass="HTMLAssertion" testname="Aserción HTML" enabled="false">
+              <longProp name="html_assertion_error_threshold">0</longProp>
+              <longProp name="html_assertion_warning_threshold">0</longProp>
+              <stringProp name="html_assertion_doctype">omit</stringProp>
+              <boolProp name="html_assertion_errorsonly">false</boolProp>
+              <longProp name="html_assertion_format">0</longProp>
+              <stringProp name="html_assertion_filename"></stringProp>
+            </HTMLAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_SendPmtNotification" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:web=&quot;http://webservices.qxmultas.quipux.com.co&quot; xmlns:xsd=&quot;http://onlinebilling.biller.webservices.qxmultas.quipux.com.co/xsd&quot;&gt;&#xd;
+           &lt;soapenv:Header/&gt;&#xd;
+           &lt;soapenv:Body&gt;&#xd;
+              &lt;web:sendPmtNotification&gt;&#xd;
+                 &lt;!--Optional:--&gt;&#xd;
+                 &lt;web:pmtNotificationRequest&gt;&#xd;
+                    &lt;!--Optional:--&gt;&#xd;
+                    &lt;xsd:currentDatetime&gt;${FechaLiquidacion}T00:00:00.445Z&lt;/xsd:currentDatetime&gt;&#xd;
+                    &lt;!--Optional:--&gt;&#xd;
+                    &lt;xsd:inqDate&gt;${FechaLiquidacion}T00:00:00.445Z&lt;/xsd:inqDate&gt;&#xd;
+                    &lt;!--Zero or more repetitions:--&gt;&#xd;
+                    &lt;xsd:paidInvoices&gt;&#xd;
+                       &lt;!--Optional:--&gt;&#xd;
+                       &lt;xsd:agreementId&gt;1&lt;/xsd:agreementId&gt;&#xd;
+                       &lt;!--Optional:--&gt;&#xd;
+                       &lt;xsd:bankAuthCode&gt;001&lt;/xsd:bankAuthCode&gt;&#xd;
+                       &lt;!--Optional:--&gt;&#xd;
+                       &lt;xsd:bankSrc&gt;0612&lt;/xsd:bankSrc&gt;&#xd;
+                       &lt;!--Optional:--&gt;&#xd;
+                       &lt;xsd:invoiceId&gt;${NumeroLiquidacion}&lt;/xsd:invoiceId&gt;&#xd;
+                       &lt;!--Optional:--&gt;&#xd;
+                       &lt;xsd:paidValue&gt;${ValorLiquidacion}00&lt;/xsd:paidValue&gt;&#xd;
+                       &lt;!--Zero or more repetitions:--&gt;&#xd;
+                       &lt;xsd:valuesDetail&gt;&#xd;
+                          &lt;!--Optional:--&gt;&#xd;
+                          &lt;xsd:description&gt;1&lt;/xsd:description&gt;&#xd;
+                          &lt;!--Optional:--&gt;&#xd;
+                          &lt;xsd:value&gt;1&lt;/xsd:value&gt;&#xd;
+                       &lt;/xsd:valuesDetail&gt;&#xd;
+                    &lt;/xsd:paidInvoices&gt;&#xd;
+                    &lt;!--Optional:--&gt;&#xd;
+                    &lt;xsd:requestId&gt;1&lt;/xsd:requestId&gt;&#xd;
+                 &lt;/web:pmtNotificationRequest&gt;&#xd;
+              &lt;/web:sendPmtNotification&gt;&#xd;
+           &lt;/soapenv:Body&gt;&#xd;
+        &lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/WsATH?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">urn:sendPmtNotification</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Aserción de Respuesta" enabled="false">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1157199354">Error inesperado</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Hay un Error inesperado revisar con arquitectura</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">20</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="WSAVVILLAS" enabled="true"/>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="FacturaEstandar" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename">${path_script}/Include/Scripts/com/co/quipux/simit2/BackOffice/WSAVVILLAS/FacturaEstandar.groovy</stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script"></stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_consultarFacturaEstandar" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wses=&quot;http://organizacion.com/wsEstandar/&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;wses:oe_consultarFacturaEstandar&gt;&#xd;
+         &lt;codBancoOrigen&gt;052&lt;/codBancoOrigen&gt;&#xd;
+         &lt;codCanal&gt;0&lt;/codCanal&gt;&#xd;
+         &lt;nroProducto&gt;086044328&lt;/nroProducto&gt;&#xd;
+         &lt;codOficinaOrigen&gt;1314&lt;/codOficinaOrigen&gt;&#xd;
+         &lt;codCiudad&gt;05001000&lt;/codCiudad&gt;&#xd;
+         &lt;fechaTransaccion&gt;${FechaFacturaEstandar}&lt;/fechaTransaccion&gt;&#xd;
+         &lt;horaTransaccion&gt;${HoraFacturaEstandar}&lt;/horaTransaccion&gt;&#xd;
+         &lt;fechaCompensacion&gt;${FechaFacturaEstandar}&lt;/fechaCompensacion&gt;&#xd;
+         &lt;referencia1&gt;${NumeroLiquidacion}&lt;/referencia1&gt;&#xd;
+         &lt;referencia2&gt;&lt;/referencia2&gt;&#xd;
+         &lt;referencia3&gt;&lt;/referencia3&gt;&#xd;
+         &lt;referencia4&gt;&lt;/referencia4&gt;&#xd;
+      &lt;/wses:oe_consultarFacturaEstandar&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/wsRecaudoBancoAvVilla?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">http://organizacion.com/wsEstandar/consultarFacturaEstandar</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <XMLAssertion guiclass="XMLAssertionGui" testclass="XMLAssertion" testname="Aserción XML" enabled="true"/>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_pagarFacturaEstandar" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"> &lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wses=&quot;http://organizacion.com/wsEstandar/&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;wses:oe_pagarFacturaEstandar&gt;&#xd;
+         &lt;codBancoOrigen&gt;052&lt;/codBancoOrigen&gt;&#xd;
+         &lt;codCanal&gt;0&lt;/codCanal&gt;&#xd;
+         &lt;nroProducto&gt;086044328&lt;/nroProducto&gt;&#xd;
+         &lt;codOficinaOrigen&gt;1314&lt;/codOficinaOrigen&gt;&#xd;
+         &lt;codCiudad&gt;11001000&lt;/codCiudad&gt;&#xd;
+         &lt;fechaTransaccion&gt;${FechaFacturaEstandar}&lt;/fechaTransaccion&gt;&#xd;
+         &lt;horaTransaccion&gt;${HoraFacturaEstandar}&lt;/horaTransaccion&gt;&#xd;
+         &lt;fechaCompensacion&gt;${FechaFacturaEstandar}&lt;/fechaCompensacion&gt;&#xd;
+         &lt;referencia1&gt;${NumeroLiquidacion}&lt;/referencia1&gt;&#xd;
+         &lt;referencia2&gt;&lt;/referencia2&gt;&#xd;
+         &lt;referencia3&gt;&lt;/referencia3&gt;&#xd;
+         &lt;referencia4&gt;&lt;/referencia4&gt;&#xd;
+         &lt;valorEfectivo&gt;${ValorLiquidacion}00&lt;/valorEfectivo&gt;&#xd;
+         &lt;valorCheque&gt;&lt;/valorCheque&gt;&#xd;
+         &lt;valorTotal&gt;${ValorLiquidacion}00&lt;/valorTotal&gt;&#xd;
+         &lt;nroAutorizacion&gt;1&lt;/nroAutorizacion&gt;&#xd;
+      &lt;/wses:oe_pagarFacturaEstandar&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/wsRecaudoBancoAvVilla?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">http://organizacion.com/wsEstandar/pagarFacturaEstandar</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <XMLAssertion guiclass="XMLAssertionGui" testclass="XMLAssertion" testname="Aserción XML" enabled="true"/>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="WSBOGOTA" enabled="true"/>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="BancoBogota" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename">${path_script}/Include/Scripts/com/co/quipux/simit2/BackOffice/WSBOGOTA/Bogota.groovy</stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script"></stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_consultarFacturaPorNumero" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:web=&quot;http://webservices.qxmultas.quipux.com.co&quot; xmlns:xsd=&quot;http://model.recaudos.qxmultas.quipux.com.co/xsd&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;web:consultarFacturaPorNumero&gt;&#xd;
+         &lt;web:consultarFacturaPorNumeroDocument&gt;&#xd;
+            &lt;xsd:cadenaIFX&gt;&lt;![CDATA[&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&#xd;
+			&lt;IFX&gt;&#xd;
+			  &lt;SignonRq&gt;&#xd;
+			    &lt;SignonPswd&gt;&#xd;
+			      &lt;CustId&gt;&#xd;
+			        &lt;SPName&gt;Empresa Pruebas&lt;/SPName&gt;&#xd;
+			        &lt;CustPermId&gt;0212&lt;/CustPermId&gt;&#xd;
+			        &lt;CustLoginId&gt;1234567890&lt;/CustLoginId&gt;&#xd;
+			      &lt;/CustId&gt;&#xd;
+			    &lt;/SignonPswd&gt;&#xd;
+			    &lt;ClientDt&gt;11964253032&lt;/ClientDt&gt;&#xd;
+			  &lt;/SignonRq&gt;&#xd;
+			  &lt;PresSvcRq&gt;&#xd;
+			    &lt;BillInqRq&gt;&#xd;
+			      &lt;MsgRqHdr&gt;&#xd;
+			        &lt;NetworkTrnInfo&gt;&#xd;
+			          &lt;NetworkOwner&gt;OFC&lt;/NetworkOwner&gt;&#xd;
+			          &lt;OriginatorName&gt;1029&lt;/OriginatorName&gt;&#xd;
+			          &lt;BankId&gt;001&lt;/BankId&gt;&#xd;
+			        &lt;/NetworkTrnInfo&gt;&#xd;
+			      &lt;/MsgRqHdr&gt;&#xd;
+			&lt;BillerId&gt;&#xd;
+			&lt;SPName&gt;Empresa Pruebas&lt;/SPName&gt;&#xd;
+			&lt;BillerNum&gt;1234&lt;/BillerNum&gt;&#xd;
+			&lt;BillInfo&gt;&#xd;
+			&lt;BillRefInfo1&gt;${NumeroLiquidacion}&lt;/BillRefInfo1&gt; &lt;!-- Codigo liquidacion --&gt; &#xd;
+			&lt;BillRefInfo2&gt;0&lt;/BillRefInfo2&gt;&#xd;
+			&lt;BillRefInfo3&gt;0&lt;/BillRefInfo3&gt;&#xd;
+			&lt;BillRefInfo4&gt;0&lt;/BillRefInfo4&gt;&#xd;
+			&lt;BillRefInfo5&gt;0&lt;/BillRefInfo5&gt;&#xd;
+			        &lt;/BillInfo&gt;&#xd;
+			  &lt;/BillerId&gt;&#xd;
+			      &lt;SelRangeDt&gt;&#xd;
+			        &lt;StartDt&gt;20220927&lt;/StartDt&gt; &lt;!-- Fecha Transaccion YYYYMMDD --&gt; &#xd;
+			      &lt;/SelRangeDt&gt;&#xd;
+			&lt;/BillInqRq&gt; &#xd;
+			 &lt;/PresSvcRq&gt;&#xd;
+			  &lt;SignoffRq&gt;&#xd;
+			    &lt;CustId&gt;&#xd;
+			      &lt;SPName&gt;Empresa Pruebas&lt;/SPName&gt;&#xd;
+			      &lt;CustPermId&gt;0212&lt;/CustPermId&gt;&#xd;
+			      &lt;CustLoginId&gt;100023340100&lt;/CustLoginId&gt;&#xd;
+			    &lt;/CustId&gt;&#xd;
+			  &lt;/SignoffRq&gt;&#xd;
+			&lt;/IFX&gt;]]&gt;&#xd;
+            &lt;/xsd:cadenaIFX&gt;&#xd;
+         &lt;/web:consultarFacturaPorNumeroDocument&gt;&#xd;
+      &lt;/web:consultarFacturaPorNumero&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/WsBancoBogota?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">urn:consultarFacturaPorNumero</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <XMLAssertion guiclass="XMLAssertionGui" testclass="XMLAssertion" testname="Aserción XML" enabled="true"/>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_registrarPagoIFX" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:web=&quot;http://webservices.qxmultas.quipux.com.co&quot; xmlns:xsd=&quot;http://webservices.qxmultas.quipux.com.co/xsd&quot;&gt;&#xd;
+ &lt;soapenv:Header/&gt;&#xd;
+ &lt;soapenv:Body&gt;&#xd;
+    &lt;web:registrarPagoIFX&gt;&#xd;
+       &lt;!--Optional:--&gt;&#xd;
+       &lt;web:registrarPagoIFXDocument&gt;&#xd;
+          &lt;!--Optional:--&gt;&#xd;
+          &lt;xsd:cadenaPagoIFX&gt;&lt;![CDATA[&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&#xd;
+			&lt;IFX&gt;&#xd;
+				&lt;SignonRq&gt;&#xd;
+					&lt;SignonPswd&gt;&#xd;
+						&lt;CustId&gt;&#xd;
+							&lt;SPName&gt;Empresa&lt;/SPName&gt;&#xd;
+							&lt;CustPermId&gt;0212&lt;/CustPermId&gt;&#xd;
+							&lt;CustLoginId&gt;1036942095&lt;/CustLoginId&gt;&#xd;
+						&lt;/CustId&gt;&#xd;
+					&lt;/SignonPswd&gt;&#xd;
+					&lt;ClientDt&gt;${FechaBogotaCompleja}&lt;/ClientDt&gt; &lt;!-- Fecha Transaccion YYYYMMDDHHmmS--&gt; &#xd;
+				&lt;/SignonRq&gt;&#xd;
+				&lt;PaySvcRq&gt;&#xd;
+					&lt;PmtAddRq&gt;&#xd;
+						&lt;RqUID&gt;0246&lt;/RqUID&gt;&#xd;
+						&lt;MsgRqHdr&gt;&#xd;
+							&lt;NetworkTrnInfo&gt;&#xd;
+								&lt;NetworkOwner&gt;OFC&lt;/NetworkOwner&gt;&#xd;
+								&lt;OriginatorName&gt;0510&lt;/OriginatorName&gt;&#xd;
+								&lt;BankId&gt;01&lt;/BankId&gt;&#xd;
+							&lt;/NetworkTrnInfo&gt;&#xd;
+						&lt;/MsgRqHdr&gt;&#xd;
+						&lt;PmtInfo&gt;	 &#xd;
+							&lt;BillerId&gt;&#xd;
+								&lt;BillerNum&gt;7709998003415&lt;/BillerNum&gt;&#xd;
+							&lt;/BillerId&gt;	&#xd;
+							&lt;Category&gt;0646&lt;/Category&gt;	&#xd;
+							&lt;CurAmt&gt;&#xd;
+								&lt;CurCode&gt;COP&lt;/CurCode&gt;&#xd;
+								&lt;Amt&gt;${ValorLiquidacion}00&lt;/Amt&gt; &lt;!-- En el valor de las facturas los ultimos dos digitos son de centavos --&gt; &#xd;
+								&lt;Efc&gt;00&lt;/Efc&gt; &lt;!-- En el valor de las facturas los ultimos dos digitos son de centavos --&gt; &#xd;
+								&lt;Chq&gt;00&lt;/Chq&gt; &lt;!-- En el valor de las facturas los ultimos dos digitos son de centavos --&gt; &#xd;
+							&lt;/CurAmt&gt;	&#xd;
+							&lt;DepAcctIdTo&gt;&#xd;
+								&lt;AcctId&gt;${NumeroLiquidacion}&lt;/AcctId&gt; &lt;!-- Codigo liquidacion --&gt; &#xd;
+								&lt;AcctType&gt;1&lt;/AcctType&gt;&#xd;
+								&lt;/DepAcctIdTo&gt;	&#xd;
+								&lt;ImmediatePmt&gt;0&lt;/ImmediatePmt&gt;	&#xd;
+							&lt;DepAcctIdFrom&gt;&#xd;
+								&lt;BankInfo&gt;&#xd;
+									&lt;BankId&gt;01&lt;/BankId&gt;&#xd;
+								&lt;/BankInfo&gt;&#xd;
+							&lt;/DepAcctIdFrom&gt;	&#xd;
+							&lt;PrcDt&gt;{FechaBogotaSimple}&lt;/PrcDt&gt;	 &lt;!-- Fecha pago YYYYMMDD --&gt; &#xd;
+							&lt;RemitInfo&gt;&#xd;
+								&lt;BillRefInfo&gt;1234&lt;/BillRefInfo&gt;&#xd;
+								&lt;RefInfo&gt;&#xd;
+									&lt;RefId1&gt;${NumeroLiquidacion}&lt;/RefId1&gt;  &lt;!-- Codigo liquidacion --&gt; &#xd;
+									&lt;RefId2&gt;0&lt;/RefId2&gt;&#xd;
+									&lt;RefId3&gt;0&lt;/RefId3&gt;&#xd;
+									&lt;RefId4&gt;0&lt;/RefId4&gt;&#xd;
+									&lt;RefId5&gt;&lt;/RefId5&gt;&#xd;
+								&lt;/RefInfo&gt;	&#xd;
+							&lt;/RemitInfo&gt;	&#xd;
+						&lt;/PmtInfo&gt;	 &#xd;
+					&lt;/PmtAddRq&gt;	&#xd;
+				&lt;/PaySvcRq&gt;&#xd;
+				&lt;SignoffRq&gt;&#xd;
+					&lt;CustId&gt;&#xd;
+						&lt;SPName&gt;Empresa&lt;/SPName&gt;&#xd;
+						&lt;CustPermId&gt;0212&lt;/CustPermId&gt;&#xd;
+						&lt;CustLoginId&gt;1036942095&lt;/CustLoginId&gt;&#xd;
+					&lt;/CustId&gt;&#xd;
+				&lt;/SignoffRq&gt;&#xd;
+			&lt;/IFX&gt;]]&gt;&#xd;
+		&lt;/xsd:cadenaPagoIFX&gt;&#xd;
+       &lt;/web:registrarPagoIFXDocument&gt;&#xd;
+    &lt;/web:registrarPagoIFX&gt;&#xd;
+ &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/WsBancoBogota?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">urn:registrarPagoIFX</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <XMLAssertion guiclass="XMLAssertionGui" testclass="XMLAssertion" testname="Aserción XML" enabled="true"/>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Consultas Publicas" enabled="true">
+        <stringProp name="TestPlan.comments">Grupo de servicios expuestos para el home publico </stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${usuarios}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="WSGenerarPazSalvo" enabled="true">
+          <stringProp name="TestPlan.comments">Servicios para la generacion de paz y salvo</stringProp>
+        </TestFragmentController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP_GetPazSalvo" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:web=&quot;http://webServices.qxMultas.quipux.com.co&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;web:getPazSalvo&gt;&#xd;
+         &lt;idFuncionario&gt;${user}&lt;/idFuncionario&gt;&#xd;
+         &lt;clave&gt;${password}&lt;/clave&gt;&#xd;
+         &lt;idSecretaria&gt;${Divipo}&lt;/idSecretaria&gt;&#xd;
+         &lt;idTipoDocumento&gt;${tipoDocumento}&lt;/idTipoDocumento&gt;&#xd;
+         &lt;idContraventor&gt;${DocumentoIdentidad}&lt;/idContraventor&gt;&#xd;
+      &lt;/web:getPazSalvo&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/TestSimit/services/WSPazSalvo?wsdl</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Servicio soap el cual nos trae el pas y salvo </stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml; charset=UTF-8 </stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">getPazSalvo</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="GetPazSalvo" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename">${path_script}/Include/Scripts/com/co/quipux/simit2/Home Publico/WSPazSalvo/GetPazSalvo.groovy</stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import org.apache.commons.lang.RandomStringUtils
+import java.security.SecureRandom
+
+
+def tipoDocumentoSelect = new SecureRandom().nextInt(1) + 1
+def tipoDocumento = [0:11, 1:10, 2:10, 3:6, 4:10, 5:11, 6:14, 7:9, 8:11, 9:11]
+String charset = ((&apos;0&apos;..&apos;9&apos;)).join()
+String randomString = RandomStringUtils.random(tipoDocumento[tipoDocumentoSelect], charset.toCharArray())
+
+props.put(&apos;tipoDocumento&apos;, tipoDocumentoSelect.toString())
+props.put(&apos;DocumentoIdentidad&apos;, randomString.toString())
+</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
+        <hashTree>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+            <stringProp name="ConstantTimer.delay">1000</stringProp>
+            <stringProp name="RandomTimer.range">100</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="WSEstadodeCuenta" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST_ConsultaEstadoCuenta" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;filtro&quot;:&quot;892384571&quot;,&#xd;
+	&quot;reCaptchaDTO&quot;:{&#xd;
+		&quot;response&quot;:&quot;[&#xd;
+		{&quot;question&quot;:&quot;43dccee79d6e0fd7eb814f8be0d7747a&quot;,&#xd;
+		&quot;time&quot;:1669380197,&#xd;
+		&quot;nonce&quot;:1110997&#xd;
+			}]&quot;,&#xd;
+		&quot;consumidor&quot;:&quot;1&quot;&#xd;
+		}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/simit/microservices/estado-cuenta-simit/estadocuenta/consulta</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Gestor de Cookies HTTP" enabled="true">
+              <collectionProp name="CookieManager.cookies">
+                <elementProp name="route" elementType="Cookie" testname="route">
+                  <stringProp name="Cookie.value">e62d74d9d05e81bc78d7c0b66a0fb355</stringProp>
+                  <stringProp name="Cookie.domain">qxsimit2.quipux.com</stringProp>
+                  <stringProp name="Cookie.path">/</stringProp>
+                  <boolProp name="Cookie.secure">false</boolProp>
+                  <longProp name="Cookie.expires">0</longProp>
+                  <boolProp name="Cookie.path_specified">true</boolProp>
+                  <boolProp name="Cookie.domain_specified">true</boolProp>
+                </elementProp>
+              </collectionProp>
+              <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+              <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+            </CookieManager>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="GetPazSalvo" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename">${path_script}/Include/Scripts/com/co/quipux/simit2/Home Publico/WSPazSalvo/GetPazSalvo.groovy</stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import org.apache.commons.lang.RandomStringUtils
+import java.security.SecureRandom
+
+
+def tipoDocumentoSelect = new SecureRandom().nextInt(1) + 1
+def tipoDocumento = [0:11, 1:10, 2:10, 3:6, 4:10, 5:11, 6:14, 7:9, 8:11, 9:11]
+String charset = ((&apos;0&apos;..&apos;9&apos;)).join()
+String randomString = RandomStringUtils.random(tipoDocumento[tipoDocumentoSelect], charset.toCharArray())
+
+props.put(&apos;tipoDocumento&apos;, tipoDocumentoSelect.toString())
+props.put(&apos;DocumentoIdentidad&apos;, randomString.toString())
+</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${path_script}\Include\assets\Evidencias\Resultados.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="Ver Resultados en Árbol" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${path_script}\Include\assets\Evidencias\Resultados.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Reporte resumen" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${path_script}\Include\assets\Evidencias\Resultados.csv</stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

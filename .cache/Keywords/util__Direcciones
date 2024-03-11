@@ -1,0 +1,107 @@
+{
+  "keywordFileContentHash": "4A5E1BD209587A77736FD846C9B913E9",
+  "keywordClasses": [
+    {
+      "name": "util.Direcciones",
+      "keywordMethods": [
+        {
+          "name": "getDireccionActual",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getDireccionDobleSlashInvertido",
+          "parameters": [
+            {
+              "name": "direccion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getDireccionDobleSlash",
+          "parameters": [
+            {
+              "name": "direccion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "voltearSlash",
+          "parameters": [
+            {
+              "name": "direccion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "voltearSlashInvertido",
+          "parameters": [
+            {
+              "name": "direccion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getDireccionReporteNodeJS",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getDireccionImagenDeEjemplo",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getDireccionCarpeta",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

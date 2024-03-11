@@ -1,0 +1,12 @@
+stages:
+  - test_katalon
+testing:run:
+  stage: test_katalon
+  script:
+    - docker run -t --rm -v "/opt/licencia/":/root/.katalon/license/ -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.sh  -noSplash -projectPath=/tmp/project/SIMIT_2.prj -browserType="Chrome" -retry=0 -testSuitePath="Test Suites/SIMIT" -executionProfile="default" -apiKey="$APIKEYKATALON" --disable-setuid-sandbox --config -webui.autoUpdateDrivers=true
+  only:
+    - master
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - Reports/*

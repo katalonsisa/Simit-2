@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Select_AuxTipoDocumento</name>
+   <tag></tag>
+   <elementGuidId>c5965b0f-f600-4833-bc91-3c4f759b7a5c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@id = 'tipoDocumentoAux']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>b72b26a4-e798-474b-ab21-b0d6d82a8f82</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>tipoDocumentoAux</value>
+      <webElementGuid>0ec1a00f-1b39-465c-b81b-2772043ce2a1</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Button_turno</name>
+   <tag></tag>
+   <elementGuidId>537f5d56-7e13-4236-ae4b-a8d9e67e9cfa</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;SD-BACKOFFICE&quot;]/div[2]/div/div/div/div[1]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/button</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>395b213a-5052-4e4e-a083-d4ea898f9878</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;SD-BACKOFFICE&quot;]/div[2]/div/div/div/div[1]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/button</value>
+      <webElementGuid>62b61e7c-d6aa-415a-b54e-f3433fd9086d</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

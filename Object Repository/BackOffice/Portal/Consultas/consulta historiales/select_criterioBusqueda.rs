@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_criterioBusqueda</name>
+   <tag></tag>
+   <elementGuidId>36d5c10b-09b9-4b7a-afdb-52a69cd411e1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'selectHistoriales']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>selectHistoriales</value>
+      <webElementGuid>cd0d6655-8ae2-4c7e-97ef-8992f431066e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>cb77da16-54b4-42e0-8227-f2f6e95e331f</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

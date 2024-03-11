@@ -1,0 +1,97 @@
+{
+  "keywordFileContentHash": "99DD7543B6C78B9E06638CEDC89BC198",
+  "keywordClasses": [
+    {
+      "name": "util.Dates",
+      "keywordMethods": [
+        {
+          "name": "getFechaActual",
+          "parameters": [
+            {
+              "name": "dia",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getTimeStamp",
+          "parameters": [
+            {
+              "name": "format",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getTimeStampSpanish",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "convertirHora",
+          "parameters": [
+            {
+              "name": "arg",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "fechaRandom",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "dateRank",
+          "parameters": [
+            {
+              "name": "rango",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

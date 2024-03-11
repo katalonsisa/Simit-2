@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "695FEA6CC51A1485B7374EAD19B76F6A",
+  "keywordClasses": [
+    {
+      "name": "co.com.quipux.simit2.backOffice.soap.WSATH.GetBill",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

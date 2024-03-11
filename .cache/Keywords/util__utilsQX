@@ -1,0 +1,124 @@
+{
+  "keywordFileContentHash": "2516B495EE6DE890C93D97640841C816",
+  "keywordClasses": [
+    {
+      "name": "util.utilsQX",
+      "keywordMethods": [
+        {
+          "name": "verifyAlerts",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * realiza la verifiacion de las alertas emergentes en el front \r\n\t */"
+        },
+        {
+          "name": "getLetra",
+          "parameters": [
+            {
+              "name": "length",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Retorna una cadena de letras\r\n\t * @param length\r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "getNumero",
+          "parameters": [
+            {
+              "name": "length",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Retorna un numero aleatorio \r\n\t * @param length \r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "JsonNoNull",
+          "parameters": [
+            {
+              "name": "json",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo para que el json que se resive no queden espacios o datos en null\r\n\t * @param json\r\n\t * @return json sin datos vacios \r\n\t */"
+        },
+        {
+          "name": "clickUsingJS",
+          "parameters": [
+            {
+              "name": "to",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Click Web element\r\n\t */"
+        },
+        {
+          "name": "uploadFile",
+          "parameters": [
+            {
+              "name": "to",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "filePath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * uploadFile in web \r\n\t * @param to \r\n\t * @param filePath\r\n\t * @return\r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

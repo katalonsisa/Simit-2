@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>este flujo comprende el procesos de cargar los comparendos al sistema y darles una liquides por boton de pago o generar cupon de pago</description>
+   <name>CargaComparendos</name>
+   <tag>CargaComparendos</tag>
+   <comment></comment>
+   <testCaseGuid>b8279f2b-a6cf-4f2c-b9a3-d483d08572d3</testCaseGuid>
+</TestCaseEntity>

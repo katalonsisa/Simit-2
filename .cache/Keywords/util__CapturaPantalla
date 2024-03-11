@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "F8A4415DFFFF299759C8E97BDA7D215F",
+  "keywordClasses": [
+    {
+      "name": "util.CapturaPantalla",
+      "keywordMethods": [
+        {
+          "name": "capturarPantalla",
+          "parameters": [
+            {
+              "name": "scenario",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "cucumber.api.Scenario",
+                "unresolvedClassName": "Scenario",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Button_agregar</name>
+   <tag></tag>
+   <elementGuidId>10655d75-7f39-4e84-ac51-ce44d60d2c53</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;formulario-documento&quot;]/div[2]/div[2]/button</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>767bfc55-6eea-4d1a-a395-e6e6ce316863</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;formulario-documento&quot;]/div[2]/div[2]/button</value>
+      <webElementGuid>686da97c-a389-49fa-89d8-8b48e71c6c83</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

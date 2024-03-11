@@ -1,0 +1,152 @@
+{
+  "keywordFileContentHash": "84EB75AEC937DB5D36E045209693E74A",
+  "keywordClasses": [
+    {
+      "name": "util.ConnectionFTP",
+      "keywordMethods": [
+        {
+          "name": "connectAndLogin",
+          "parameters": [
+            {
+              "name": "modulo",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo para conectarse con el ftp y iniciar sesión \u003cbr\u003e la conexion esta determinadad a durar 3 minutos pero se recomienta cerrar sesion al teminar  \r\n\t * @param modulo \u003cbr\u003e modulo donde estan las configuraciones del ftp\r\n\t * @return \u003cb\u003eFTPClient\u003c/b\u003e retorna una conexion al ftp con FTPClient \r\n\t * @throws IOException\r\n\t */"
+        },
+        {
+          "name": "checkFile",
+          "parameters": [
+            {
+              "name": "ftpClient",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.apache.commons.net.ftp.FTPClient",
+                "unresolvedClassName": "FTPClient",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "path",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "document",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo para buscar en el ftp si existe un documeto o archivo \r\n\t * @param ftpClient \u003cbr\u003e conexion del ftp\r\n\t * @param path \u003cbr\u003e ruta donde esta el archivo/documento\r\n\t * @param document \u003cbr\u003e nombre del archivo/documentos\r\n\t * @return Si encuentra el documento retorna verdadero de lo contrario retorna falso \r\n\t * @author kevin.muentes\r\n\t */"
+        },
+        {
+          "name": "saveFile",
+          "parameters": [
+            {
+              "name": "ftpClient",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.apache.commons.net.ftp.FTPClient",
+                "unresolvedClassName": "FTPClient",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "path",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "document",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "nameDocument",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Almacena documetos en el ftp\r\n\t * @param ftpClient \u003c/br\u003e conexion con el ftp \r\n\t * @param path \u003c/br\u003e ruta donde se almacenar el documento en el ftp\r\n\t * @param document \u003c/br\u003e ruta donde esta el documento con su estencion \r\n\t * @param nameDocument \u003c/br\u003e nombre del documento con el cual se almacenara en el ftp \r\n\t */"
+        },
+        {
+          "name": "CloseConnetion",
+          "parameters": [
+            {
+              "name": "connexion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.apache.commons.net.ftp.FTPClient",
+                "unresolvedClassName": "FTPClient",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * cierra la connexion con el FTP \r\n\t * @param connexion \u003cbr\u003e conexion al ftp a cerrar \r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

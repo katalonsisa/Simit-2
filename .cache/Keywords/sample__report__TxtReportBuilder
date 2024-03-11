@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "FDD870D262F9B63D8F7AF5877792F438",
+  "keywordClasses": [
+    {
+      "name": "sample.report.TxtReportBuilder",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

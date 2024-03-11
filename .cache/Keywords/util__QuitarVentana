@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "EA61D16DC3D4ACC7C1BE3A0979D9BB1A",
+  "keywordClasses": [
+    {
+      "name": "util.QuitarVentana",
+      "keywordMethods": [
+        {
+          "name": "quitarVentana",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

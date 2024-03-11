@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_cerrar_Encuesta</name>
+   <tag></tag>
+   <elementGuidId>13a701be-af88-48cb-9724-121d94b572c4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;modalEncuestaSatisfaccion&quot;]/div/div/div[1]/button</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;modalEncuestaSatisfaccion&quot;]/div/div/div[1]/button</value>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "523E5B4D561BCF3A9EB32C97B6BAE299",
+  "keywordClasses": [
+    {
+      "name": "model.cargaArchivos.evidencias.DocumentoCargaArchivosDTO",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

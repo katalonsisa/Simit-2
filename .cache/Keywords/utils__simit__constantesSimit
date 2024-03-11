@@ -1,0 +1,38 @@
+{
+  "keywordFileContentHash": "F13E55F33776E8909FC599B1A22A14FD",
+  "keywordClasses": [
+    {
+      "name": "utils.simit.constantesSimit",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$modulos",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$commonPath",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$DocumentoCargaArchivo",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$CursosViales",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$documentosExtenciones",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$jmeterIntegracion",
+      "keywordMethods": []
+    },
+    {
+      "name": "utils.simit.constantesSimit$letraConstantes",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

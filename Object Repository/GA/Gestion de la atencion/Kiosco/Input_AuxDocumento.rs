@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Input_AuxDocumento</name>
+   <tag></tag>
+   <elementGuidId>c111bbe0-7da0-4fd5-b566-cc9d06bb65d1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@id = 'nroDocumentoAux']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>be4c5541-13f9-4681-9f99-ef4a4e3df191</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>nroDocumentoAux</value>
+      <webElementGuid>33010f17-d7d2-4e82-a2d8-8fe210f4cf13</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

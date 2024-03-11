@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>SISA</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>tiempo de espera minimo para relizar los siguientes pasos</description>
+      <initValue>2</initValue>
+      <name>shortDelay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>tiempo de espera promedio para pasar al siguiente paso</description>
+      <initValue>10</initValue>
+      <name>delay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>tiempo maximo de espera para el metodo de wait for  element present </description>
+      <initValue>30</initValue>
+      <name>delayWFEP</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>url del portal publico </description>
+      <initValue>'https://qxfrontsimitqa.quipux.com/simit/#/home-public'</initValue>
+      <name>urlHomePublico</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>la url de BackOffice</description>
+      <initValue>'http://qaconsultassimit.fcm.org.co/backoffice/'</initValue>
+      <name>urlBackOffice</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Url para el Gestion de la atencion</description>
+      <initValue>'https://gestionatencion.fcm.org.co/gestionatencion/login.html'</initValue>
+      <name>urlGA</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Correo donde se resivira la informacion mandada por la aplicacion</description>
+      <initValue>'pruebasWATSimit2@gmail.com'</initValue>
+      <name>emailUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Contraseña del correo </description>
+      <initValue>'JxqoN7BbUOm/xmU+Z6YyYA=='</initValue>
+      <name>emailPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>dominio donde estan alojados los web service </description>
+      <initValue>'qaconsultassimit.fcm.org.co'</initValue>
+      <name>dominio</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Contexto donde se especifica donde estan los servicios en el servidor </description>
+      <initValue>'simit/microservices'</initValue>
+      <name>contexto</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'\r\n'</initValue>
+      <name>tokenName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para la conexion a la BD de Negocio</description>
+      <initValue>[('Port') : '1521', ('Name') : 'SIMIT', ('Host') : '172.31.67.26']</initValue>
+      <name>DBNegocio</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para la conexion a la DB de Gestion</description>
+      <initValue>[('Port') : '1521', ('Name') : 'PROGESMT', ('Host') : '172.31.67.26']</initValue>
+      <name>DBGestion</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de resoluciones</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : 'j9u[F2hEL9[]C%', ('user') : 'SMTNOVEDADES']</initValue>
+      <name>SMTNOVEDADES</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de Cargues</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : '0}vXvnsO@Lwh}e', ('user') : 'SMTCARGUES']</initValue>
+      <name>SMTCARGUES</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de recaudos</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : 'Rxfs6RQj@Ih3KC', ('user') : 'SMTRECAUDOS']</initValue>
+      <name>SMTRECAUDOS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de comparendos</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : 'bxGttCC:fowF%X', ('user') : 'SMTCOMPARENDOS']</initValue>
+      <name>SMTCOMPARENDOS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para gestión administración, seguridad, catálogos y personas</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : '4DEwFbj*Eq>]', ('user') : 'SMTCATALOGOSIMIT']</initValue>
+      <name>SMTADMINISTRACION</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para la gestión de multas, comparenderas</description>
+      <initValue>[('DB') : 'DBGestion', ('password') : '0Ph:shWD9I=JRE', ('user') : 'SMTMULTAS']</initValue>
+      <name>SMTMULTAS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Destinatarios a los cuales les llegara el reporte de ejecucion </description>
+      <initValue>'kevin.muentes@quipux.com;'</initValue>
+      <name>emailDestinatarios</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Cop destinatarios</description>
+      <initValue>''</initValue>
+      <name>emailcc</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>emailBcc</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>usuario para GA</description>
+      <initValue>'PruebaSisa'</initValue>
+      <name>UserGADefaul</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>password para el usuario de GA</description>
+      <initValue>'j/rqY7qN9/VlA+dOQBhV+Q=='</initValue>
+      <name>PasswordGADefaul</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Usuario preterminado</description>
+      <initValue>'MonitoreoSIMIT'</initValue>
+      <name>UserDefault</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>contraseña preterminada</description>
+      <initValue>'F1d2r3c45*'</initValue>
+      <name>PasswordDefault</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

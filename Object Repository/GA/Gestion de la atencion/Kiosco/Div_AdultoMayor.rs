@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Div_AdultoMayor</name>
+   <tag></tag>
+   <elementGuidId>a1c73a75-75b4-4d9f-91d7-6b777f8ea3d6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@id = 'preferencial0']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>e62926dd-087e-4cc2-bc97-cc23ec3c75fe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>preferencial0</value>
+      <webElementGuid>3a6580e4-898a-4d9f-94a9-179deea8ac66</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

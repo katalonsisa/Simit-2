@@ -1,0 +1,62 @@
+{
+  "keywordFileContentHash": "FDF17BE3A3DD42F9A5BACBB41085EB17",
+  "keywordClasses": [
+    {
+      "name": "utils.simit.BuildWSBogota",
+      "keywordMethods": [
+        {
+          "name": "BuildXMLConsultarFacturaPorNumero",
+          "parameters": [
+            {
+              "name": "numeroLiquidacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Genera el xml para el servicio soap de consultarFacturaPorNumero\r\n\t * @param numeroLiquidacion\r\n\t * @return \u003cb\u003eXML\u003c/b\u003e\r\n\t */"
+        },
+        {
+          "name": "buildXmlRegistrarPagoIFX",
+          "parameters": [
+            {
+              "name": "numeroLiquidacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "Valor",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Genera el Xml para el servicio soap de RegistrarPagosIFX\r\n\t * @param numeroLiquidacion\r\n\t * @param Valor\r\n\t * @return \u003cb\u003eXML\u003c/b\u003e \r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

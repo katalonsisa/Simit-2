@@ -1,0 +1,81 @@
+{
+  "keywordFileContentHash": "5065BC82118513D26367A2456509D638",
+  "keywordClasses": [
+    {
+      "name": "util.DirrecionesAleatorias",
+      "keywordMethods": [
+        {
+          "name": "getRandomVia",
+          "parameters": [
+            {
+              "name": "nomenclatura",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * \r\n\t * Retorna una via  aleatoria\r\n\t * @param nomenclatura 0 para nombre completo y 1 para la nomenclatura\r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "getRandomPuntoCardinal",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * Retorna un punto cardinal \r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "getRandomEdificacion",
+          "parameters": [
+            {
+              "name": "nomenclatura",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Retorna un tipo de edificacion \r\n\t * @param nomenclatura 0 para nombre completo y 1 para su nomenclatura \r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "getRandomDireccion",
+          "parameters": [
+            {
+              "name": "isEdificacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "boolean",
+                "unresolvedClassName": "boolean",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Retorna una direcion aleatoria \r\n\t * @param isEdificacion pregunta si es una lugar de resicendia \r\n\t * @return\r\n\t */"
+        }
+      ]
+    },
+    {
+      "name": "util.DirrecionesAleatorias$1",
+      "keywordMethods": []
+    },
+    {
+      "name": "util.DirrecionesAleatorias$2",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

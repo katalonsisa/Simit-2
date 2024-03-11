@@ -1,0 +1,151 @@
+{
+  "keywordFileContentHash": "A1389CF0A557A94A77C0340ECF0B6960",
+  "keywordClasses": [
+    {
+      "name": "util.PropertiesManager",
+      "keywordMethods": [
+        {
+          "name": "getStringSql",
+          "parameters": [
+            {
+              "name": "modulo",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "propiedad",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "parametros",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "",
+                "unresolvedClassName": "",
+                "isArray": true,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "componentType": {
+                  "fullClassName": "java.lang.Object",
+                  "unresolvedClassName": "Object",
+                  "isArray": false,
+                  "isGnericsPlaceHolder": false,
+                  "hasImmutableClassName": false,
+                  "genericsTypes": [],
+                  "errorOnParsing": false
+                },
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo que recupera un SQL ubicado en el sqlQuerys.properties\r\n\t * @param propiedad  \u003cbr\u003e el nombre con el cual se hace referencía al SQL que se desea recuperar \r\n\t * @param parametros \u003cbr\u003e se envia los parametros solicitados por el SQL en el orden definidó en el propertis de la siguiente forma \u003cb\u003eEjemplo \u003c/b\u003e \u003cbr\u003e [\"cadena\"] \u003cbr\u003e [12] \u003cbr\u003e [true] \u003cbr\u003e [\"cadena\",12,true] \u003cbr\u003e cuando no se envían parametros se debe mandar null \r\n\t * @param modulo \u003cbr\u003e donde esta ubicadó el sqlQuerys.properties \r\n\t * @return Retorna un String (cadena) con el SQL modificadó con los parametros enviados  \r\n\t * @author kevin.muentes\r\n\t */"
+        },
+        {
+          "name": "getStringSetting",
+          "parameters": [
+            {
+              "name": "modulo",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "propiedad",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Metodo para llamar una propiedad de las configuraciones del modulo \r\n\t * @param modulo\r\n\t * @param propiedad\r\n\t * @return retorna el valor de la configuracion \r\n\t * @author kevin.muentes\r\n\t */"
+        },
+        {
+          "name": "getMessages",
+          "parameters": [
+            {
+              "name": "modulo",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "propiedad",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "parametros",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "",
+                "unresolvedClassName": "",
+                "isArray": true,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "componentType": {
+                  "fullClassName": "java.lang.Object",
+                  "unresolvedClassName": "Object",
+                  "isArray": false,
+                  "isGnericsPlaceHolder": false,
+                  "hasImmutableClassName": false,
+                  "genericsTypes": [],
+                  "errorOnParsing": false
+                },
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * traer el mensaje de error \r\n\t * @param modulo\r\n\t * @param propiedad\r\n\t * @return retorna el valor de la configuracion\r\n\t * @author kevin.muentes\r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

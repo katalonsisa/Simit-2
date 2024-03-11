@@ -1,0 +1,35 @@
+{
+  "keywordFileContentHash": "0CD85439BEFB9871DE1E6F064DE86938",
+  "keywordClasses": [
+    {
+      "name": "util.Imagen",
+      "keywordMethods": [
+        {
+          "name": "refreshBrowser",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * Refresh browser\r\n\t */"
+        },
+        {
+          "name": "getFilePath",
+          "parameters": [
+            {
+              "name": "nombre",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

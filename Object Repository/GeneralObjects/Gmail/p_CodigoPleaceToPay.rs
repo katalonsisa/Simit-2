@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_CodigoPleaceToPay</name>
+   <tag></tag>
+   <elementGuidId>e630a48d-28ed-4289-89de-8771315a20e5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//td/p[contains(@style,'letter-spacing:0.035em')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//td/p[contains(@style,'letter-spacing:0.035em')]</value>
+   </webElementProperties>
+</WebElementEntity>

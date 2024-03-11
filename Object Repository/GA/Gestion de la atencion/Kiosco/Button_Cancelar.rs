@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Button_Cancelar</name>
+   <tag></tag>
+   <elementGuidId>ef2c3f54-b4d9-442f-a77d-b8e37a1442d9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@ng-click = 'kioscoController.cancelar()']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>bdf74b20-b168-470c-9c49-aa372c6c6a4b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>kioscoController.cancelar()</value>
+      <webElementGuid>7537c820-bf3d-48b9-bb2a-65e3dafeec3c</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

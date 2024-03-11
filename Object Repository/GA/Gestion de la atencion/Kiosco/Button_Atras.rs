@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Button_Atras</name>
+   <tag></tag>
+   <elementGuidId>4cb342d3-ffe5-4cf5-a7f2-c9e50a81e226</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@ng-click = 'kioscoController.pasoAnterior()']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>d8f767c2-ecc0-495d-88c1-aed86ae18163</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>kioscoController.pasoAnterior()</value>
+      <webElementGuid>d5352c90-10c5-48ff-8118-095a680ab474</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

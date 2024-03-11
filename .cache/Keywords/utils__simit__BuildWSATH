@@ -1,0 +1,62 @@
+{
+  "keywordFileContentHash": "E3736FC8FC563A948CCB83081C2A3D27",
+  "keywordClasses": [
+    {
+      "name": "utils.simit.BuildWSATH",
+      "keywordMethods": [
+        {
+          "name": "BuildXMLPagoLiquidacion",
+          "parameters": [
+            {
+              "name": "numeroLiquidacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "Valor",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Genera la estructura xml para el pago de la Liquidacion \r\n\t * @param numeroLiquidacion \r\n\t * @param Valor del comparendo sin los centavos  \r\n\t * @return String \r\n\t */"
+        },
+        {
+          "name": "buildGetbill",
+          "parameters": [
+            {
+              "name": "numeroLiquidacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Genera estructura XML para el consumo de GetBill de ATH \r\n\t * @param numeroLiquidacion\r\n\t * @return\r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

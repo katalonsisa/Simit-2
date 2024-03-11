@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "390B1D5D6B5863EE5519D6511A1322F1",
+  "keywordClasses": [
+    {
+      "name": "co.com.quipux.simit2.backOffice.soap.WSATH.PagoLiquidacion",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

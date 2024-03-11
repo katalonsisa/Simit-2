@@ -1,0 +1,14 @@
+{
+  "keywordFileContentHash": "A6019171CFC31EC9D6FFCF8352A4E946",
+  "keywordClasses": [
+    {
+      "name": "util.Cookie",
+      "keywordMethods": []
+    },
+    {
+      "name": "util.WebServicesUtil",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description>tiempo de espera minimo para relizar los siguientes pasos</description>
+      <initValue>1</initValue>
+      <name>shortDelay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>tiempo de espera promedio para pasar al siguiente paso</description>
+      <initValue>3</initValue>
+      <name>delay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>tiempo maximo de espera para el metodo de wait for  element present </description>
+      <initValue>30</initValue>
+      <name>delayWFEP</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>url de inico de la aplicacion </description>
+      <initValue>'https://frontsimitpruebas.quipux.com/#/home-public'</initValue>
+      <name>urlHomePublico</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>la url de BackOffice</description>
+      <initValue>'https://qaconsultassimit.fcm.org.co/gestionatencion/login.html\n'</initValue>
+      <name>urlBackOffice</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Correo donde se resivira la informacion mandada por la aplicacion</description>
+      <initValue>'pruebasWATSimit2@gmail.com'</initValue>
+      <name>emailUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Contraseña del correo </description>
+      <initValue>'JxqoN7BbUOm/xmU+Z6YyYA=='</initValue>
+      <name>emailPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>dominio donde estan alojados los web service </description>
+      <initValue>'backsimit2pru.quipux.com'</initValue>
+      <name>dominio</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Contexto donde se especifica donde estan los servicios en el servidor </description>
+      <initValue>'simit/microservices'</initValue>
+      <name>contexto</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'\r\n'</initValue>
+      <name>tokenName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para la conexion a la DB de Negocios</description>
+      <initValue>[('Port') : '1521', ('Name') : 'PRSIMIT', ('Host') : '10.125.30.230']</initValue>
+      <name>DBNegocio</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para la conexion a la DB de Negocios</description>
+      <initValue>[('Port') : '1521', ('Name') : 'PRSIMIT', ('Host') : '10.125.30.230']</initValue>
+      <name>DBMantenimiento</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para la Conexion a la DB de Gestion</description>
+      <initValue>[('Port') : '1521', ('Name') : 'PRSIMITG', ('Host') : '10.125.30.249']</initValue>
+      <name>DBGestion</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de resoluciones</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : 'j8br(XF^auH;', ('user') : 'SMTNOVEDADES']</initValue>
+      <name>SMTNOVEDADES</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de Cargues</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : '4xi-Dv8OmvL*', ('user') : 'SMTCARGUES']</initValue>
+      <name>SMTCARGUES</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de recaudos</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : 'o>tv^xMz6Lgg1', ('user') : 'SMTRECAUDOS']</initValue>
+      <name>SMTRECAUDOS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para el módulo de comparendos</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : 'Ojs;w3D(GDF4', ('user') : 'SMTCOMPARENDOS']</initValue>
+      <name>SMTCOMPARENDOS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para gestión administración, seguridad, catálogos y personas</description>
+      <initValue>[('DB') : 'DBNegocio', ('password') : '4-ByWsBq!7kuVV', ('user') : 'SMTCATALOGOSIMIT']</initValue>
+      <name>SMTADMINISTRACION</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Configuracion para gestión administración, seguridad, catálogos y personas</description>
+      <initValue>[('DB') : 'DBMantenimiento', ('password') : 'Qx1S7mITY*22', ('user') : 'quipux']</initValue>
+      <name>MANTENIMIENTO</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Destinatarios a los cuales les llegara el reporte de ejecucion </description>
+      <initValue>'kevin.muentes@quipux.com;'</initValue>
+      <name>emailDestinatarios</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Cop destinatarios</description>
+      <initValue>''</initValue>
+      <name>emailCC</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>emailBcc</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Divipo asociado al userDefault</description>
+      <initValue>'05615000'</initValue>
+      <name>divipoDefault</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Usuario preterminado</description>
+      <initValue>'MonitoreoSIMIT'</initValue>
+      <name>UserDefault</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>contraseña preterminada</description>
+      <initValue>'F1d2r3c45*'</initValue>
+      <name>PasswordDefault</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Input_recaudo</name>
+   <tag></tag>
+   <elementGuidId>7d3cb4b9-0ffa-4bbe-bc09-4bd3f752260a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@id = 'fileRecaudoLocal']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>fileRecaudoLocal</value>
+      <webElementGuid>d1334d30-2830-4a79-80bc-b87f5d207dd2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>3e0c2bba-08b6-46c2-961b-2111c36f978f</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

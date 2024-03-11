@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "D46503E1332AC84B848104DCA94CD814",
+  "keywordClasses": [
+    {
+      "name": "utils.simit.generateCSV",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

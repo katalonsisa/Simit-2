@@ -1,0 +1,62 @@
+{
+  "keywordFileContentHash": "706AE6F2DA6FA7CF0371B60A99D38F11",
+  "keywordClasses": [
+    {
+      "name": "utils.simit.BuildWSAVVILLAS",
+      "keywordMethods": [
+        {
+          "name": "buildXMLPagoFacturaEstandar",
+          "parameters": [
+            {
+              "name": "numeroLiquidacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "Valor",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Genera el XLM para el servicio Pago Factura de AVVILLAS\r\n\t * @param numeroLiquidacion\r\n\t * @param Valor\r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "buildXMLConsultaFactura",
+          "parameters": [
+            {
+              "name": "numeroLiqudacion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

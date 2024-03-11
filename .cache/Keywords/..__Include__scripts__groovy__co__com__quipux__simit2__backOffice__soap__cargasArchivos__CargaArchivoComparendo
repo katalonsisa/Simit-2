@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "C2692ABB081312B034C38CD41CF57215",
+  "keywordClasses": [
+    {
+      "name": "co.com.quipux.simit2.backOffice.soap.cargasArchivos.CargaArchivoComparendo",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

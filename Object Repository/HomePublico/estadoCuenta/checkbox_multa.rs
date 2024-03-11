@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>checkbox_Multa</name>
+   <tag></tag>
+   <elementGuidId>6bc2341c-691a-4c9e-a526-1be2098cfe13</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//td[@id='tdMulta${id}']/div/label</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//td[@id='tdMulta${id}']/div/label</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//td[@id='tdMulta${id}']/div/label</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>checkbox</value>
+   </webElementProperties>
+</WebElementEntity>
